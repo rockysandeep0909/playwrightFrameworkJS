@@ -1,0 +1,23 @@
+{
+  "name": "batch3",
+  "version": "1.0.0",
+  "description": "This is playwright framework which is built using javascript and playwright . This is batch 3 which started in november.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rockysandeep0909/playwrightFrameworkJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rockysandeep0909/playwrightFrameworkJS/issues"
+  },
+  "homepage": "https://github.com/rockysandeep0909/playwrightFrameworkJS#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1"
+  }
+}
