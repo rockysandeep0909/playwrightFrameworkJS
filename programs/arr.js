@@ -20,10 +20,12 @@ console.log(marks);
 
 marks.unshift(99);
 console.log(marks);
-
+let sum=0;
 for(let i=0;i<marks.length;i++){
     console.log("Marks at index "+i+" is "+marks[i]);
+    sum+=marks[i];//sum=sum+marks[i];
 }
 
-marks[1]=35;
-console.log(marks);
+console.log("Total Marks: "+sum);
+let avg=sum/marks.length;
+console.log("Average Marks: "+avg);
