@@ -66,3 +66,5 @@ test('TC 03 - Adding product to the cart and review cart item',async ({page})=>{
 
   //validation of checkout page
 }) 
+
+
