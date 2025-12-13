@@ -32,4 +32,35 @@ console.log(Math.round(sum/marks.length));
 //console.log(marks[2]);
 //console.log(marks[3]);
 
-console.log("Array Programs at end");
+// search for an element in array
+
+console.log(marks.includes(70));
+console.log(marks.includes(300));
+
+//index of an element in array
+console.log(marks.indexOf(94));
+console.log(marks.indexOf(70));
+console.log(marks.indexOf(300));
+
+//sort the array
+marks.sort();
+console.log("Array after sort");
+console.log(marks);
+
+// array - reduce , filter
+
+
+let sum1=0;
+for(let i=0;i<marks.length;i++){
+    console.log(marks[i]);
+    sum1=sum1+marks[i];
+}
+console.log("Sum is "+sum);
+
+let sum2=marks.reduce((total,marks)=> total+marks,0);
+console.log("Sum using reduce is "+sum2);
+
+
+let filtermarks=marks.filter((marks)=> marks%2==0);
+console.log("numbers which are even are ");
+console.log(filtermarks);
