@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "This is playwright framework which is built using javascript and playwright . This is batch 3 which started in november.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+"alltest": "npx playwright test",
+"chrometest": "npx playwright test --project=chromium",
+"firefoxtest":"npx playwright test --project=firefox",
+"webkittest":"npx playwright test --project=webkit",
+"e2e":"npx playwright test tests/todo-page.spec.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rockysandeep0909/playwrightFrameworkJS.git"
