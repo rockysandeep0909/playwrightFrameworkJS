@@ -13,3 +13,33 @@ test('TC-01- Upload a file to the application', async ({ page }) => {
     await expect(page.locator("//h3[text()='File Uploaded!']")).toHaveText("File Uploaded!");
 
 });
+
+// browser fixture to launch paytm appliation 
+test('TC-02- Launch application using browser fixture', async ({ browser }) => {
+
+   
+    const context= await browser.newContext();
+    const page=await context.newPage();
+    await page.goto('https://paytm.com/');
+    await page.waitForTimeout(5000);
+    
+});
+
+
+
+test('TC-03- Launch application using browser fixture', async ({ page }) => {
+
+
+
+
+    await page.goto('https://paytm.com/');
+    await page.locator("//li[text()='Recharge & Bills']").hover();
+    await page.waitForTimeout(5000);
+    await page.locator("//li[text()='Recharge & Bills']/../li//a[text()='Mobile Recharge']").click();
+     await page.waitForTimeout(5000);
+    
+    await page.locator("//button[text()='Proceed to Recharge']").click();
+    await page.waitForTimeout(5000);
+
+    
+});
