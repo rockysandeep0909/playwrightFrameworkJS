@@ -43,3 +43,15 @@ test('TC-03- Launch application using browser fixture', async ({ page }) => {
 
     
 });
+
+// navigation methods - goBack, goForward, reload
+
+test('TC-04 - Navigation methods - saucedemo application',async ({page})=>{
+    await page.goto("https://www.saucedemo.com/");
+    await page.goBack();
+    await page.waitForTimeout(5000);
+    await page.goForward();
+    await page.waitForTimeout(5000);
+    await page.reload();
+    await page.waitForTimeout(5000);
+})
