@@ -1,0 +1,27 @@
+2025-12-14 12:11:15 [info]: Starting login test
+2025-12-14 12:11:18 [info]: Navigated to login page
+2025-12-14 12:11:18 [info]: Entered username
+2025-12-14 12:11:18 [info]: Entered password
+2025-12-14 12:11:18 [info]: Login successful
+2025-12-14 12:13:34 [info]: Starting login test
+2025-12-14 12:13:36 [info]: Navigated to login page
+2025-12-14 12:13:36 [info]: Entered username
+2025-12-14 12:13:36 [info]: Entered password
+2025-12-14 12:13:36 [info]: Login successful
+2025-12-14 12:14:19 [info]: =========================
+2025-12-14 12:14:19 [info]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2025-12-14 12:14:19 [info]: Starting login test
+2025-12-14 12:14:21 [info]: Navigated to login page
+2025-12-14 12:14:22 [info]: Entered username
+2025-12-14 12:14:22 [info]: Entered password
+2025-12-14 12:14:22 [info]: Login successful
+2025-12-16 08:56:44 [info]: =========================
+2025-12-16 08:56:44 [info]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2025-12-16 08:56:44 [info]: Starting login test
+2025-12-16 08:57:11 [info]: =========================
+2025-12-16 08:57:11 [info]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2025-12-16 08:57:11 [info]: Starting login test
+2025-12-16 08:57:12 [info]: Navigated to login page
+2025-12-16 08:57:12 [info]: Entered username
+2025-12-16 08:57:13 [info]: Entered password
+2025-12-16 08:57:13 [info]: Login successful

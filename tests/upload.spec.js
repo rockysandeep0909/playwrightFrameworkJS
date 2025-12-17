@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-
+import 'dotenv/config';
 
 test('TC-01- Upload a file to the application', async ({ page }) => {
     await page.goto('https://the-internet.herokuapp.com/upload');
@@ -47,7 +47,7 @@ test('TC-03- Launch application using browser fixture', async ({ page }) => {
 // navigation methods - goBack, goForward, reload
 
 test('TC-04 - Navigation methods - saucedemo application',async ({page})=>{
-    await page.goto("https://www.saucedemo.com/");
+    await page.goto(process.env.BASE_URL);
     await page.goBack();
     await page.waitForTimeout(5000);
     await page.goForward();

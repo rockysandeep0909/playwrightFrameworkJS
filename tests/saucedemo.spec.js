@@ -1,15 +1,32 @@
 //const {test,expect}=require('@playwright/test')
 import { test, expect } from '@playwright/test';
+import 'dotenv/config';
+import logger from '../utils/logger';
+
+function getRandomNumber(min,max){
+  return Math.floor(Math.random()*(max-min+1)+min);
+}
 
 // Test case to login to saucedemo application
 test('TC 01 - login to saucedemo applicaiton using valid username and password ',async ({page})=>{
+  logger.info("=========================");
+  logger.info("Executing TC 01 - login to saucedemo applicaiton using valid username and password");
+  logger.info('Starting login test');
+  await  page.goto(process.env.BASE_URL);
+  logger.info('Navigated to login page');
 
-  await  page.goto('https://www.saucedemo.com/');
-  await  page.locator("//input[@data-test='username']").fill('standard_user');
-  await page.locator("//input[@data-test='password']").fill("secret_sauce");
+
+
+   
+  await  page.locator("//input[@data-test='username']").fill(process.env.user_Name);
+    logger.info('Entered username');
+  await page.locator("//input[@data-test='password']").fill(process.env.PASSWORD);
+   logger.info('Entered password');
   await page.locator("//input[@id='login-button']").click();
-  await console.log("login successful");
+ 
+  logger.info('Login successful');
   await page.waitForTimeout(5000);
+
 
   // validation step - Assertions
  await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
@@ -18,13 +35,13 @@ test('TC 01 - login to saucedemo applicaiton using valid username and password '
 // Negative test case to login to saucedemo application
 test('TC 02 login to saucedemo applicaiton with invalid username and password ',async ({page})=>{
 
-  await page.goto('https://www.saucedemo.com/');
-  await page.locator("//input[@data-test='username']").fill('standard_user');
-  await page.locator("//input[@data-test='password']").fill("secret_sauce1");
+  await page.goto(process.env.BASE_URL);
+  await page.locator("//input[@data-test='username']").fill(process.env.user_Name);
+  await page.locator("//input[@data-test='password']").fill(process.env.PASSWORD);
   await page.locator("//input[@id='login-button']").click();
   await console.log("login successful");
-  await page.waitForTimeout(5000);
-
+  await page.waitForTimeout(Number(process.env.customtimeout));
+  console.log(getRandomNumber(1,1000));
   // validation step - Assertions
   await expect(page.locator("//button[@class='error-button']")).toBeVisible();
 
@@ -33,11 +50,11 @@ test('TC 02 login to saucedemo applicaiton with invalid username and password ',
 
 test('TC 03 - Adding product to the cart and review cart item',async ({page})=>{
 
-  await page.goto('https://www.saucedemo.com/');
+  await page.goto(process.env.BASE_URL);
   // assertion for title
   await expect(page).toHaveTitle('Swag Labs');
-  await page.locator("//input[@data-test='username']").fill('standard_user');
-  await page.locator("//input[@data-test='password']").fill("secret_sauce");
+  await page.locator("//input[@data-test='username']").fill(process.env.user_Name);
+  await page.locator("//input[@data-test='password']").fill(process.env.PASSWORD);
   await page.locator("//input[@id='login-button']").click();
   await console.log("login successful");
   await page.waitForTimeout(5000);
@@ -52,6 +69,7 @@ test('TC 03 - Adding product to the cart and review cart item',async ({page})=>{
   let ReceivedMessage = await page.locator("//div[text()='Sauce Labs Backpack']").textContent();
   console.log("Received message " + ReceivedMessage);
   let expectedMessage = 'Sauce Labs Backpack';
+  
   await expect(page.locator("//div[text()='Sauce Labs Backpack']")).toHaveText(expectedMessage);
 
 
@@ -75,7 +93,7 @@ test('TC 03 - Adding product to the cart and review cart item',async ({page})=>{
   let cartItem = await page.locator("//div[@class='inventory_item_name']").textContent();
   console.log("Cart item is " + cartItem);  
 
-  await page.pause();
+  //await page.pause();
   await page.locator("//div[@class='inventory_item_name']").hover();
   // click on checkout button
   await page.locator("//button[@id='checkout']").click();
@@ -91,9 +109,14 @@ test('TC 03 - Adding product to the cart and review cart item',async ({page})=>{
 
 // selecting the sorting option from the dropdown
 test('TC 04- Selecting sorting option from the dropdown',async ({page})=>{
-  await page.goto('https://www.saucedemo.com/');
-  await page.locator("//input[@data-test='username']").fill('standard_user');
-  await page.locator("//input[@data-test='password']").fill("secret_sauce");
+  await page.goto(process.env.BASE_URL);
+  await page.locator("//input[@data-test='username']").fill(process.env.user_Name);
+  await page.locator("//input[@data-test='password']").fill(process.env.PASSWORD);
+
+  // utility interactionutil.js
+  const InteractionUtil = require('../utils/interactionutil');
+  const interactionUtil = new InteractionUtil();  
+  await interactionUtil.clickElement(page.locator("//input[@id='login-button']"));
   await page.locator("//input[@id='login-button']").click();
   await console.log("login successful");
   await page.waitForTimeout(5000);
@@ -101,8 +124,10 @@ test('TC 04- Selecting sorting option from the dropdown',async ({page})=>{
   await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 
   let sortingoption=page.locator("//select[@class='product_sort_container']");
+// use utils/dropdownutil.js
+  const dropdownUtil = new DropdownUtil();
 
-  await sortingoption.selectOption('hilo');
+  await dropdownUtil.selectDropdownOption(sortingoption, 'hilo');
   await page.waitForTimeout(5000);
   
   await sortingoption.selectOption('lohi');
@@ -120,7 +145,7 @@ test('TC 04- Selecting sorting option from the dropdown',async ({page})=>{
 
 test('TC -05 - Navigation methods - paytm application',async ({page})=>{
 
-  await page.goto("https://paytm.com/");
+  await page.goto(process.env.paytmurl);
   await page.locator("//li[text()='Recharge & Bills']").hover();
   await page.screenshot({ path: 'paytm.png' });
   await page.goBack();
@@ -148,3 +173,15 @@ test('TC-07 - Visual testing using playwright',async ({page})=>{
 
 
 })
+
+
+// to user browser context to launch instagram
+
+test("TC -08  - Launch instagram using browser context",async ({browser})=>{ 
+  const context=await browser.newContext();
+  const page=await context.newPage();
+  await page.goto("https://www.instagram.com/");
+  await page.waitForTimeout(5000);
+
+})
+
