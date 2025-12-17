@@ -1,0 +1,47 @@
+2025-12-17 09:13:11 [INFO]: Navigated to file upload page
+2025-12-17 09:13:12 [INFO]: File upload initiated
+2025-12-17 09:13:12 [INFO]: File upload verified successfully
+2025-12-17 09:13:29 [INFO]: Launching Paytm application using browser fixture
+2025-12-17 09:13:34 [INFO]: Navigated to Paytm homepage
+2025-12-17 09:14:26 [INFO]: =========================
+2025-12-17 09:14:26 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2025-12-17 09:14:26 [INFO]: Starting login test
+2025-12-17 09:14:28 [INFO]: Navigated to login page
+2025-12-17 09:14:28 [INFO]: Entered username
+2025-12-17 09:14:28 [INFO]: Entered password
+2025-12-17 09:14:29 [INFO]: Login successful
+2025-12-17 09:15:50 [INFO]: =========================
+2025-12-17 09:15:50 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2025-12-17 09:15:50 [INFO]: Starting login test
+2025-12-17 09:15:51 [INFO]: Navigated to login page
+2025-12-17 09:15:51 [INFO]: Entered username
+2025-12-17 09:15:51 [INFO]: Entered password
+2025-12-17 09:18:12 [INFO]: Navigated to Paytm homepage
+2025-12-17 09:18:23 [INFO]: Navigated to Mobile Recharge page
+2025-12-17 09:19:52 [INFO]: Navigated to Paytm homepage
+2025-12-17 09:20:02 [INFO]: Navigated to Mobile Recharge page
+2025-12-17 09:21:56 [INFO]: Navigated to file upload page
+2025-12-17 09:21:56 [ERROR]: This is a sample error log
+2025-12-17 09:21:56 [WARN]: This is a sample warning log
+2025-12-17 09:21:57 [INFO]: File upload initiated
+2025-12-17 09:21:57 [INFO]: File upload verified successfully
+2025-12-17 09:23:42 [ERROR]: This is a sample error log
+2025-12-17 09:24:13 [INFO]: Navigated to file upload page
+2025-12-17 09:24:13 [ERROR]: This is a sample error log
+2025-12-17 09:24:13 [WARN]: This is a sample warning log
+2025-12-17 09:24:13 [DEBUG]: This is a sample debug log
+2025-12-17 09:24:14 [INFO]: File upload initiated
+2025-12-17 09:24:14 [INFO]: File upload verified successfully
+2025-12-17 09:24:58 [INFO]: Navigated to file upload page
+2025-12-17 09:24:58 [ERROR]: This is a sample error log
+2025-12-17 09:24:58 [WARN]: This is a sample warning log
+2025-12-17 09:24:58 [DEBUG]: This is a sample debug log
+2025-12-17 09:24:59 [INFO]: File upload initiated
+2025-12-17 09:24:59 [INFO]: File upload verified successfully
+2025-12-17 09:25:39 [INFO]: Navigated to file upload page
+2025-12-17 09:25:39 [ERROR]: This is a sample error log
+2025-12-17 09:25:39 [WARN]: This is a sample warning log
+2025-12-17 09:25:39 [DEBUG]: This is a sample debug log
+2025-12-17 09:25:39 [SILLY]: This is a sample silly log
+2025-12-17 09:25:40 [INFO]: File upload initiated
+2025-12-17 09:25:40 [INFO]: File upload verified successfully

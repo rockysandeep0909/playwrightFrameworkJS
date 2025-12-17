@@ -24,12 +24,13 @@ test('TC 01 - login to saucedemo applicaiton using valid username and password '
    logger.info('Entered password');
   await page.locator("//input[@id='login-button']").click();
  
-  logger.info('Login successful');
+  
   await page.waitForTimeout(5000);
 
 
   // validation step - Assertions
  await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
+ logger.info('Login successful');
 }) 
 
 // Negative test case to login to saucedemo application
