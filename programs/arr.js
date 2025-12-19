@@ -41,3 +41,15 @@ console.log(marks.includes(90))
 console.log(marks.includes(91))
 
 console.log(marks.indexOf(70))
+
+// sort --- strings 
+
+let fruits=['Banana','Apple','Mango','Orange','Pineapple'];
+console.log(fruits);
+fruits.sort();
+console.log("After sorting: ");
+console.log(fruits);
+
+fruits.sort().reverse();
+console.log("After sorting in descending order: ");
+console.log(fruits);
