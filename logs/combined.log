@@ -45,3 +45,77 @@
 2025-12-17 09:25:39 [SILLY]: This is a sample silly log
 2025-12-17 09:25:40 [INFO]: File upload initiated
 2025-12-17 09:25:40 [INFO]: File upload verified successfully
+2025-17-12 09:27:49 [INFO]: Navigated to file upload page
+2025-17-12 09:27:49 [ERROR]: This is a sample error log
+2025-17-12 09:27:49 [WARN]: This is a sample warning log
+2025-17-12 09:27:49 [DEBUG]: This is a sample debug log
+2025-17-12 09:27:49 [SILLY]: This is a sample silly log
+2025-17-12 09:27:50 [INFO]: File upload initiated
+2025-17-12 09:27:50 [INFO]: File upload verified successfully
+2025-12-18 08:30:03 [INFO]: Navigated to Paytm homepage
+2025-12-18 08:30:40 [INFO]: Navigated to Paytm homepage
+2025-12-18 08:33:24 [INFO]: Navigated to Paytm homepage
+2025-12-18 08:42:25 [INFO]: Navigated to Instagram Page
+2025-12-18 08:43:56 [INFO]: Navigated to Instagram Page
+2025-12-18 08:44:29 [INFO]: Navigated to Instagram Page
+2025-12-18 08:45:10 [INFO]: Navigated to Instagram Page
+2025-12-18 08:45:43 [INFO]: Navigated to Instagram Page
+2025-12-18 08:51:37 [INFO]: Naviagated to saucedemo application
+2025-12-18 08:51:37 [INFO]: Entered username
+2025-12-18 08:51:37 [INFO]: Entered password
+2025-12-18 08:51:37 [INFO]: Clicked on login button
+2025-12-18 08:52:18 [INFO]: Naviagated to saucedemo application
+2025-12-18 08:52:18 [INFO]: Entered username
+2025-12-18 08:52:18 [INFO]: Entered password
+2025-12-18 08:52:18 [INFO]: Clicked on login button
+2025-12-18 08:53:48 [INFO]: Naviagated to saucedemo application
+2025-12-18 08:53:49 [INFO]: Entered username
+2025-12-18 08:53:49 [INFO]: Entered password
+2025-12-18 08:53:49 [INFO]: Clicked on login button
+2025-12-18 09:00:57 [INFO]: =========================
+2025-12-18 09:00:57 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2025-12-18 09:00:57 [INFO]: Starting login test
+2025-12-18 09:00:59 [INFO]: Navigated to login page
+2025-12-18 09:00:59 [INFO]: Entered username
+2025-12-18 09:00:59 [INFO]: Entered password
+2025-12-18 09:01:13 [INFO]: =========================
+2025-12-18 09:01:13 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2025-12-18 09:01:13 [INFO]: Starting login test
+2025-12-18 09:01:15 [INFO]: Navigated to login page
+2025-12-18 09:01:15 [INFO]: Entered username
+2025-12-18 09:01:15 [INFO]: Entered password
+2025-12-20 09:14:03 [INFO]: Navigated to file upload page
+2025-12-20 09:14:03 [ERROR]: This is a sample error log
+2025-12-20 09:14:03 [WARN]: This is a sample warning log
+2025-12-20 09:14:04 [INFO]: File upload initiated
+2025-12-20 09:14:04 [INFO]: File upload verified successfully
+2025-12-20 09:15:15 [ERROR]: This is a sample error log
+2025-12-20 09:15:15 [WARN]: This is a sample warning log
+2025-12-20 09:16:52 [INFO]: Navigated to file upload page
+2025-12-20 09:16:52 [ERROR]: This is a sample error log
+2025-12-20 09:16:52 [WARN]: This is a sample warning log
+2025-12-20 09:16:52 [DEBUG]: This is a sample debug log
+2025-12-20 09:16:52 [SILLY]: This is a sample silly log
+2025-12-20 09:16:52 [SILLY]: Preparing to upload file
+2025-12-20 09:16:54 [INFO]: File upload initiated
+2025-12-20 09:16:54 [INFO]: File upload verified successfully
+2025-12-20 09:46:17 [INFO]: Navigated to file upload page
+2025-12-20 09:46:17 [ERROR]: This is a sample error log
+2025-12-20 09:46:17 [WARN]: This is a sample warning log
+2025-12-20 09:46:17 [DEBUG]: This is a sample debug log
+2025-12-20 09:46:17 [SILLY]: This is a sample silly log
+2025-12-20 09:46:17 [SILLY]: Preparing to upload file
+2025-12-20 09:46:18 [INFO]: File upload initiated
+2025-12-21 11:34:19 [INFO]: Navigated to saucedemo application
+2025-12-21 11:35:53 [INFO]: Navigated to saucedemo application
+2025-12-21 11:37:26 [INFO]: Navigated to saucedemo application
+2025-12-21 11:37:27 [INFO]: Performed login action
+2025-12-21 11:43:50 [INFO]: Navigated to saucedemo application
+2025-12-21 11:43:50 [INFO]: Entered username
+2025-12-21 11:43:50 [INFO]: Entered password
+2025-12-21 11:43:50 [INFO]: Clicked on login button
+2025-12-21 11:48:51 [INFO]: Navigated to saucedemo application
+2025-12-21 11:48:51 [INFO]: Entered username
+2025-12-21 11:48:51 [INFO]: Entered password
+2025-12-21 11:48:51 [INFO]: Clicked on login button
+2025-12-21 11:48:51 [INFO]: Clicked on add to cart button for product
