@@ -8,7 +8,7 @@ function getRandomNumber(min,max){
 }
 
 // Test case to login to saucedemo application
-test('TC 01 - login to saucedemo applicaiton using valid username and password ',async ({page})=>{
+test.only('TC 01 - login to saucedemo applicaiton using valid username and password ',async ({page})=>{
   logger.info("=========================");
   logger.info("Executing TC 01 - login to saucedemo applicaiton using valid username and password");
   logger.info('Starting login test');
@@ -29,7 +29,7 @@ test('TC 01 - login to saucedemo applicaiton using valid username and password '
 
 
   // validation step - Assertions
- await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
+ await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html1');
  logger.info('Login successful');
 }) 
 
@@ -148,7 +148,7 @@ test('TC -05 - Navigation methods - paytm application',async ({page})=>{
 
   await page.goto(process.env.paytmurl);
   await page.locator("//li[text()='Recharge & Bills']").hover();
-  await page.screenshot({ path: 'paytm.png' });
+  await page.screenshot({ path: 'paytm1.png' });
   await page.goBack();
   await page.waitForTimeout(5000);
   await page.goForward();
