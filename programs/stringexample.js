@@ -31,3 +31,40 @@ while(value!==-1){
 }
 
 console.log("JavaScript occured "+count+" times");
+//aeiou - vowels 
+let str="javascript";
+
+console.log(str.charAt(4));
+let vowelcount=0;
+for(let i=0;i<str.length;i++){
+    let ch=str.charAt(i);
+    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+        vowelcount++;
+    }
+}
+console.log("Vowel count is: "+vowelcount);
+
+let vo=0;
+for(let ch of str){
+  if ("aeiou".includes(ch)){
+    vo++;
+  }
+  
+}
+console.log("Vowel count using includes shortcut method: "+vo);
+
+let someString="Hello World";
+console.log(someString.length);
+let spacecount=0;
+if(someString.includes(" ")){
+ spacecount++;
+}
+let actualcharactesrs=someString.length-=spacecount;
+console.log("Actual characters without spaces: "+actualcharactesrs);
+let counter=0;
+for(let ch of someString){
+    if(ch!=' '){
+        counter++;
+    }
+}
+console.log("Actual characters without spaces using loop: "+counter);
