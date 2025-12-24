@@ -11,6 +11,8 @@ constructor(page){
    this.loginButton= page.locator("//input[@id='login-button']");
 }
 
+
+
 //Region 2
     async goToLoginPage(){
     await this.page.goto("https://www.saucedemo.com/");
