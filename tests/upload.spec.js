@@ -18,7 +18,7 @@ test('TC-01- Upload a file to the application', async ({ page }) => {
     logger.info("File upload initiated");
 
     // assertion to verify file upload
-    await expect(page.locator("//h3[text()='File Uploaded!']")).toHaveText("File Uploaded");
+    await expect(page.locator("//h3[text()='File Uploaded!']")).toHaveText("File Uploaded!");
     logger.info("File upload verified successfully");
 
 });
@@ -102,7 +102,7 @@ test('TC-07- Visual testing example 2',async ({page})=>{
     await page.goto(process.env.BASE_URL);
    logger.info("Naviagated to saucedemo application");
     expect (await page.screenshot()).toMatchSnapshot("expectedsaucedemo.png");
-      await  page.locator("//input[@data-test='username']").fill(process.env.user_Name);
+      await  page.locator(" ").fill(process.env.user_Name);
     logger.info('Entered username');
   await page.locator("//input[@data-test='password']").fill(process.env.PASSWORD);
    logger.info('Entered password');

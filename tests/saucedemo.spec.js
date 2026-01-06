@@ -148,7 +148,7 @@ test('TC -05 - Navigation methods - paytm application',async ({page})=>{
 
   await page.goto(process.env.paytmurl);
   await page.locator("//li[text()='Recharge & Bills']").hover();
-  await page.screenshot({ path: 'paytm1.png' });
+  await page.screenshot({ path: 'paytm2.png' });
   await page.goBack();
   await page.waitForTimeout(5000);
   await page.goForward();

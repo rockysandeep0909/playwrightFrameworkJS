@@ -7,8 +7,11 @@ const logger = require('../utils/logger');
 test("TC-01 - E2E test using page object model",async ({page})=>{  
     const loginPage=new LoginPage(page);
     const inventoryPage=new InventoryPage(page);
-
+    
     await loginPage.goTO();
+    await loginPage.valid
+
+    
     logger.info("Navigated to saucedemo application");
     await loginPage.enterusername(process.env.user_Name);
     logger.info("Entered username");

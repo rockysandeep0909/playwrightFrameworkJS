@@ -119,3 +119,35 @@
 2025-12-21 11:48:51 [INFO]: Entered password
 2025-12-21 11:48:51 [INFO]: Clicked on login button
 2025-12-21 11:48:51 [INFO]: Clicked on add to cart button for product
+2025-12-23 09:47:13 [INFO]: Navigated to login page
+2025-12-23 09:47:13 [INFO]: Performed login operation
+2025-12-23 09:47:13 [INFO]: Clicked on product to view details
+2025-12-23 09:47:13 [INFO]: Clicked on cart badge to view cart items
+2026-01-05 10:04:17 [INFO]: Navigated to file upload page
+2026-01-05 10:04:17 [ERROR]: This is a sample error log
+2026-01-05 10:04:17 [WARN]: This is a sample warning log
+2026-01-05 10:04:17 [DEBUG]: This is a sample debug log
+2026-01-05 10:04:17 [SILLY]: This is a sample silly log
+2026-01-05 10:04:17 [SILLY]: Preparing to upload file
+2026-01-05 10:04:18 [INFO]: File upload initiated
+2026-01-06 08:48:59 [INFO]: Navigated to login page
+2026-01-06 08:48:59 [INFO]: Entered username
+2026-01-06 08:48:59 [INFO]: Entered password
+2026-01-06 08:48:59 [INFO]: Clicked on login button
+2026-01-06 08:48:59 [INFO]: Performed login operation
+2026-01-06 08:48:59 [INFO]: Clicked on product to view details
+2026-01-06 08:48:59 [INFO]: Clicked on cart badge to view cart items
+2026-01-06 08:50:42 [INFO]: Navigated to login page
+2026-01-06 08:51:35 [INFO]: Entered username
+2026-01-06 08:51:38 [INFO]: Entered password
+2026-01-06 08:51:40 [INFO]: Clicked on login button
+2026-01-06 08:51:40 [INFO]: Performed login operation
+2026-01-06 08:51:41 [INFO]: Clicked on product to view details
+2026-01-06 08:51:42 [INFO]: Clicked on cart badge to view cart items
+2026-01-06 08:52:09 [INFO]: Navigated to login page
+2026-01-06 08:52:29 [INFO]: Entered username
+2026-01-06 08:52:29 [INFO]: Entered password
+2026-01-06 08:52:29 [INFO]: Clicked on login button
+2026-01-06 08:52:29 [INFO]: Performed login operation
+2026-01-06 08:52:29 [INFO]: Clicked on product to view details
+2026-01-06 08:52:29 [INFO]: Clicked on cart badge to view cart items
