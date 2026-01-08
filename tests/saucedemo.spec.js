@@ -2,6 +2,9 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
 import logger from '../utils/logger';
+const TabUtil = require('../utils/tabutil');
+const tabUtil = new TabUtil();
+const IFrameUtil = require('../utils/iframeutil');
 
 function getRandomNumber(min,max){
   return Math.floor(Math.random()*(max-min+1)+min);
@@ -128,7 +131,7 @@ test('TC 04- Selecting sorting option from the dropdown',async ({page})=>{
 // use utils/dropdownutil.js
   const dropdownUtil = new DropdownUtil();
 
-  await dropdownUtil.selectDropdownOption(sortingoption, 'hilo');
+  await dropdownUtil.selectDropdownOption(CartPage.sortingoption, 'hilo');
   await page.waitForTimeout(5000);
   
   await sortingoption.selectOption('lohi');
@@ -186,3 +189,46 @@ test("TC -08  - Launch instagram using browser context",async ({browser})=>{
 
 })
 
+test('TC-09 - Handling multiple tabs using playwright',async ({page})=>{
+  await page.goto("https://demoqa.com/browser-windows");
+  // click on new tab button
+  await tabUtil.openNewTabWithURL(page.browser(), page.context(), "https://demoqa.com/browser-windows");
+  await page.waitForTimeout(5000);
+})
+
+
+test('TC-10 - Handling iframes in playwright', async ({page}) => {
+  const iframeUtil = new IFrameUtil();
+  
+  await page.goto("https://the-internet.herokuapp.com/iframe");
+  await page.waitForTimeout(2000);
+
+  // Method 1: Using frameLocator
+  const frameLocator = page.frameLocator('iframe[title="Rich Text Area"]');
+  await frameLocator.locator('body').fill('Hello from iframe');
+  
+  // Method 2: Using utility
+  const text = await iframeUtil.getTextFromFrame(
+    page, 
+    'iframe[title="Rich Text Area"]', 
+    'body'
+  );
+  console.log("Frame text: " + text);
+});
+
+
+test('handling tables in playwright',async ({page})=>{
+  await page.goto("https://demo.guru99.com/test/web-table-element.php");
+  // get all rows
+  let rows=await page.locator("//table[@class='dataTable']/tbody/tr").count();
+  console.log("Number of rows are "+ rows);
+  for(let i=1;i<=rows;i++){
+    let companyName=await page.locator("//table[@class='dataTable']/tbody/tr["+i+"]/td[1]").textContent();
+    let currentPrice=await page.locator("//table[@class='dataTable']/tbody/tr["+i+"]/td[4]").textContent();
+    console.log("Company Name: "+ companyName + " Current Price: "+ currentPrice);
+  }
+
+
+
+  
+})
