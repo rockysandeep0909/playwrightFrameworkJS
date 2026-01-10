@@ -217,7 +217,7 @@ test('TC-10 - Handling iframes in playwright', async ({page}) => {
 });
 
 
-test('handling tables in playwright',async ({page})=>{
+test('TC - 11 handling tables in playwright',async ({page})=>{
   await page.goto("https://demo.guru99.com/test/web-table-element.php");
   // get all rows
   let rows=await page.locator("//table[@class='dataTable']/tbody/tr").count();
@@ -232,4 +232,29 @@ test('handling tables in playwright',async ({page})=>{
 
 
   
+})
+
+
+test("TC -12  - Launching paytm using browser context",async ({browser})=>{ 
+  const context=await browser.newContext();
+  const page=await context.newPage();
+  await page.goto("https://www.paytm.com/");
+  await page.waitForTimeout(5000);
+  await page.locator("//li[text()='Recharge & Bills']").hover();
+
+  const mobileRechargeLink=await page.locator("//li[text()='Recharge & Bills']/..//a[text()='Mobile Recharge']");
+  //await page.locator("//li[text()='Recharge & Bills']/..//a[text()='Mobile Recharge']").click();
+    const [newTab]=await Promise.all([
+    context.waitForEvent('page'),
+    mobileRechargeLink.click()
+  ]);
+// handling new tab 
+   await newTab.locator("//label[text()='Postpaid']").click();
+
+   await newTab.locator("//button[contains(@class,'_15qf _2qE6')]").click();
+
+   await page.waitForTimeout(5000);
+
+   await page.locator("//span[@title='Sign In']").click();
+   await page.waitForTimeout(5000);
 })

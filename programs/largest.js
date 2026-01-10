@@ -1,5 +1,5 @@
 let a=20;
-let b=-10000
+let b=200
 let c=199;
 
 if(a>=b && a>=c){

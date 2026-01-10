@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import 'dotenv/config';
 const logger = require('../utils/logger');
 
+const DropdownUtil = require('../utils/dropdownutil');
 
 test('TC-01- Upload a file to the application', async ({ page }) => {
     await page.goto('https://the-internet.herokuapp.com/upload');
@@ -11,6 +12,10 @@ test('TC-01- Upload a file to the application', async ({ page }) => {
     logger.debug("This is a sample debug log");
     logger.silly("This is a sample silly log");
     logger.silly("Preparing to upload file");
+
+      const dropdownUtil = new DropdownUtil();
+      dropdownUtil.selectDropdownOption(page.locator("//select[@id='dropdown']"), "option2");
+   
 
     // upload the file
     await page.locator("//input[@id='file-upload']").setInputFiles("C://Users//Sandeep//Desktop//Repos//Batch3//sampleupload.txt");
