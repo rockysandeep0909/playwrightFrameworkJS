@@ -225,7 +225,8 @@ test('handling tables in playwright',async ({page})=>{
   for(let i=1;i<=rows;i++){
     let companyName=await page.locator("//table[@class='dataTable']/tbody/tr["+i+"]/td[1]").textContent();
     let currentPrice=await page.locator("//table[@class='dataTable']/tbody/tr["+i+"]/td[4]").textContent();
-    console.log("Company Name: "+ companyName + " Current Price: "+ currentPrice);
+    let percentageChange=await page.locator("//table[@class='dataTable']/tbody/tr["+i+"]/td[5]").textContent();
+    console.log("Company Name: "+ companyName + " Current Price: "+ currentPrice+ " Percentage Change: "+ percentageChange);
   }
 
 
