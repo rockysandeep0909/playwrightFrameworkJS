@@ -1,4 +1,4 @@
-const {test}=require('@playwright/test');
+const {test,expect}=require('@playwright/test');
 
 
 test('Web Table Handling Test', async ({page})=>{
@@ -25,5 +25,57 @@ test('Web Table Handling Test for w3schools', async ({page})=>{
     let countryName=await page.locator("//table[@id='customers']/tbody/tr["+i+"]/td[3]").textContent();
      console.log("Country Name: "+ countryName);
     }
+
+});
+
+
+test("checkbox demo and iframe demo", async ({page})=>{
+
+    await page.goto("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_checkbox");
+// handle the iframe
+
+    let newframe=await page.frameLocator("//iframe[@id='iframeResult']");
+    let statusbefore=await newframe.locator("//input[@value='Bike']").isChecked(); //false
+    console.log("status of checkbox before clicking is "+ statusbefore);
+    expect(await newframe.locator("//input[@value='Bike']").isChecked()).toBeFalsy();
+
+    await newframe.locator("//input[@value='Bike']").click();
+    await newframe.locator("//input[@value='Car']").click();
+    let statusafter=await newframe.locator("//input[@value='Bike']").isChecked();
+    console.log("status of checkbox after clicking is "+ statusafter)
+    expect(await newframe.locator("//input[@value='Bike']").isChecked()).toBeTruthy();
+
+})
+
+
+test("browser fixutre example using paytm", async ({browser})=>{
+  const context=await browser.newContext();
+  const page=await context.newPage();
+  await page.goto("https://paytm.com/");
+  await page.waitForTimeout(5000);
+  await page.locator("//li[text()='Recharge & Bills']").hover();
+
+  const mobileRechargeLink=await page.locator("//li[text()='Recharge & Bills']/..//a[text()='Mobile Recharge']");
+  mobileRechargeLink.click();
+   await page.locator("//label[text()='Postpaid']").click();
+
+
+})
+
+
+test("javascript alerts handling using playwright", async ({page})=>{
+  await page.goto("https://the-internet.herokuapp.com/javascript_alerts")
+
+//   await  page.locator("//button[text()='Click for JS Alert']").click();
+//   await page.on('dialog',dialog=>dialog.accept());
+
+  await  page.locator("//button[text()='Click for JS Confirm']").click();
+  await page.on('dialog',dialog=>dialog.accept());
+
+
+ await  page.locator("//button[text()='Click for JS Confirm']").click();
+  await page.on('dialog',dialog=>dialog.dismiss());
+
+  await page.pause();
 
 });
