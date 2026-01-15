@@ -270,6 +270,8 @@ test('TC-13 - File download using playwright',async ({page})=>{
   ]); 
   // save download to specific location
   const downloadPath = 'C:\\Users\\Sandeep\\Desktop\\Repos\\Batch3\\downloadedfiles\\' + download.suggestedFilename();
+
+
   await download.saveAs(downloadPath);
   console.log("Download saved to: "+ downloadPath);
 
@@ -456,12 +458,23 @@ test('TC-27 - Handling timeouts in playwright',async ({page})=>{
 });
 // test to handle scrolling in playwright
 test('TC-28 - Handling scrolling in playwright',async ({page})=>{
-  await page.goto("https://www.example.com/");
+  await page.goto("https://www.selenium.dev/downloads/");
   // scroll down
+
+  await page.pause();
+  await page.evaluate(() => window.scrollBy(0, 400));
+  await page.evaluate(() => window.scrollBy(0, 500));
   await page.evaluate(() => {
     window.scrollBy(0, window.innerHeight);
   });
-  await page.waitForTimeout(5000);   
+  await page.waitForTimeout(5000);  
+  
+// to do horizontal scroll - use window.innerwidth ... window.scrollBy(250,0)
+
+  await page.evaluate(() => {
+    window.scrollBy(0, window.innerHeight);
+  });
+  
   // scroll up
   await page.evaluate(() => {
     window.scrollBy(0, -window.innerHeight);
@@ -472,16 +485,29 @@ test('TC-28 - Handling scrolling in playwright',async ({page})=>{
 // test to handle keyboard events in playwright
 test('TC-29 - Handling keyboard events in playwright',async ({page})=>{
   await page.goto(process.env.BASE_URL);
-  const searchBox=page.locator("//input[@data-test='username']");
-  await searchBox.click();
-  await searchBox.fill("Playwright testing");
+ await page.pause();
+ const it=await page.locator("//input[@data-test='username']").getAttribute('placeholder');
+ console.log("inner text is "+it);
+  const Username=page.locator("//input[@data-test='username']");
+    let puzzlebefore=await page.locator("//input[@data-test='username']").inputValue();
+    console.log("this is before entering text"+puzzlebefore)
+  await Username.click();
+  await Username.fill("Playwright testing");
   
   await page.keyboard.press('ArrowLeft');
   await page.keyboard.press('ArrowLeft');
   await page.keyboard.press('Backspace');
+  await page.keyboard.press('Delete')
+
   await page.keyboard.type('D');
-  await page.pause();
-  await page.keyboard.press('Enter');
+  
+  await page.keyboard.press('Control+A');
+  //await page.keyboard.press('A');
+  //await page.keyboard.press('Tab')
+ 
+  let puzzleafter=await page.locator("//input[@data-test='username']").inputValue();
+  console.log("after entering the text "+puzzleafter)
+  //await page.keyboard.press('Enter');
   await page.waitForTimeout(5000);
 });
 
@@ -616,12 +642,13 @@ test('TC-41 - Handling autosuggest dropdown in playwright',async ({page})=>{
   const count=await suggestions.count();
    console.log("Number of suggestions: "+ count);
    const expectedtext="Playwright (software)End-to-end testing framework"
+   const simpleExp="End-to-end testing framework"
   for(let i=0;i<count;i++){
-    const suggestionText=await suggestions.nth(i).textContent();
-    console.log("Suggestion "+ (i+1) + ": " + suggestionText);
-    if(suggestionText==expectedtext){
+    const actualText=await suggestions.nth(i).textContent();
+    //console.log("Suggestion "+ (i+1) + ": " + suggestionText);
+    if(actualText==expectedtext){
       await suggestions.nth(i).click();
-      
+      break
     }
   await page.pause();
   } 
