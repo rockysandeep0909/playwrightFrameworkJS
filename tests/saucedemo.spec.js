@@ -117,10 +117,6 @@ test('TC 04- Selecting sorting option from the dropdown',async ({page})=>{
   await page.locator("//input[@data-test='username']").fill(process.env.user_Name);
   await page.locator("//input[@data-test='password']").fill(process.env.PASSWORD);
 
-  // utility interactionutil.js
-  const InteractionUtil = require('../utils/interactionutil');
-  const interactionUtil = new InteractionUtil();  
-  await interactionUtil.clickElement(page.locator("//input[@id='login-button']"));
   await page.locator("//input[@id='login-button']").click();
   await console.log("login successful");
   await page.waitForTimeout(5000);
@@ -128,11 +124,7 @@ test('TC 04- Selecting sorting option from the dropdown',async ({page})=>{
   await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 
   let sortingoption=page.locator("//select[@class='product_sort_container']");
-// use utils/dropdownutil.js
-  const dropdownUtil = new DropdownUtil();
 
-  await dropdownUtil.selectDropdownOption(CartPage.sortingoption, 'hilo');
-  await page.waitForTimeout(5000);
   
   await sortingoption.selectOption('lohi');
   await page.waitForTimeout(5000);
@@ -485,7 +477,7 @@ test('TC-28 - Handling scrolling in playwright',async ({page})=>{
 // test to handle keyboard events in playwright
 test('TC-29 - Handling keyboard events in playwright',async ({page})=>{
   await page.goto(process.env.BASE_URL);
- await page.pause();
+
  const it=await page.locator("//input[@data-test='username']").getAttribute('placeholder');
  console.log("inner text is "+it);
   const Username=page.locator("//input[@data-test='username']");
@@ -503,11 +495,11 @@ test('TC-29 - Handling keyboard events in playwright',async ({page})=>{
   
   await page.keyboard.press('Control+A');
   //await page.keyboard.press('A');
-  //await page.keyboard.press('Tab')
+  await page.keyboard.press('Tab')
  
   let puzzleafter=await page.locator("//input[@data-test='username']").inputValue();
   console.log("after entering the text "+puzzleafter)
-  //await page.keyboard.press('Enter');
+  await page.keyboard.press('Enter');
   await page.waitForTimeout(5000);
 });
 
@@ -673,3 +665,56 @@ test('TC-43 - Handling iframe without using iframeutil in playwright', async ({p
   const text = await frame.locator('body').textContent();
   console.log("Frame text without iframeutil: " + text);
 });
+
+// Smoke test for Wikipedia
+test('TC-44 - Wikipedia smoke test', async ({page}) => {
+  logger.info("=========================");
+  logger.info("Executing TC-44 - Wikipedia smoke test");
+  
+  // Navigate to Wikipedia
+  await page.goto("https://www.wikipedia.org/");
+  logger.info("Navigated to Wikipedia homepage");
+  
+  // Verify page title
+  const title = await page.title();
+  console.log("Page Title: " + title);
+  await expect(page).toHaveTitle("Wikipedia");
+  logger.info("Page title verified");
+  
+  // Verify main heading is visible
+  const mainHeading = page.locator('h1');
+  await expect(mainHeading).toBeVisible();
+  logger.info("Main heading is visible");
+  
+  // Verify Wikipedia logo is present
+  const logo = page.locator('//a[@class="central-featured-logo"]');
+  await expect(logo).toBeVisible();
+  logger.info("Wikipedia logo is visible");
+  
+  // Verify search box is visible and functional
+  const searchBox = page.locator('//input[@name="search"]');
+  await expect(searchBox).toBeVisible();
+  logger.info("Search box is visible");
+  
+  // Perform a search interaction
+  await searchBox.fill("JavaScript");
+  logger.info("Entered search term in search box");
+  
+  // Verify search box has the entered text
+  const searchValue = await searchBox.inputValue();
+  console.log("Search value: " + searchValue);
+  await expect(searchBox).toHaveValue("JavaScript");
+  logger.info("Search functionality verified");
+  
+  // Verify language options are visible
+  const languageLinks = page.locator('//a[@hreflang]');
+  const languageCount = await languageLinks.count();
+  console.log("Number of language options: " + languageCount);
+  await expect(languageCount).toBeGreaterThan(0);
+  logger.info("Language options are available");
+  
+  await page.waitForTimeout(3000);
+  logger.info("Wikipedia smoke test completed successfully");
+});
+
+//
