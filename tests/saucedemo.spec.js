@@ -236,19 +236,23 @@ test("TC -12  - Launching paytm using browser context",async ({browser})=>{
 
   const mobileRechargeLink=await page.locator("//li[text()='Recharge & Bills']/..//a[text()='Mobile Recharge']");
   //await page.locator("//li[text()='Recharge & Bills']/..//a[text()='Mobile Recharge']").click();
-    const [newTab]=await Promise.all([
+    const [newPage]=await Promise.all([
     context.waitForEvent('page'),
-    mobileRechargeLink.click()
+    mobileRechargeLink.click(),
   ]);
 // handling new tab 
-   await newTab.locator("//label[text()='Postpaid']").click();
+   await newPage.locator("//label[text()='Postpaid']").click();
 
-   await newTab.locator("//button[contains(@class,'_15qf _2qE6')]").click();
+   await newPage.locator("//button[contains(@class,'_15qf _2qE6')]").click();
+
+   await newPage.close();
 
    await page.waitForTimeout(5000);
-
+// how to find what is happening in old page when a new tab is opened in playwright
    await page.locator("//span[@title='Sign In']").click();
    await page.waitForTimeout(5000);
+   //await newPage.locator("//span[@title='Sign In']").click();
+  await page.waitForTimeout(5000);
 })
 
 
@@ -451,6 +455,8 @@ test('TC-27 - Handling timeouts in playwright',async ({page})=>{
 // test to handle scrolling in playwright
 test('TC-28 - Handling scrolling in playwright',async ({page})=>{
   await page.goto("https://www.selenium.dev/downloads/");
+
+  await page.locator("//a[text()='GitHub repository']").click();
   // scroll down
 
   await page.pause();

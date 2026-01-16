@@ -79,3 +79,12 @@ test("javascript alerts handling using playwright", async ({page})=>{
   await page.pause();
 
 });
+
+
+// test to handle http authentication in playwright
+test('TC-26 - Handling http authentication in playwright',async ({page})=>{
+
+  await page.goto("https://the-internet.herokuapp.com/basic_auth"); 
+  await page.waitForTimeout(5000);   
+  await page.locator("")
+});
