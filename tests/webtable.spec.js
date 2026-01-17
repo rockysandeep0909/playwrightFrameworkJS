@@ -1,4 +1,4 @@
-const {test,expect}=require('@playwright/test');
+const {test,expect,request}=require('@playwright/test');
 
 
 test('Web Table Handling Test', async ({page})=>{
@@ -87,4 +87,45 @@ test('TC-26 - Handling http authentication in playwright',async ({page})=>{
   await page.goto("https://the-internet.herokuapp.com/basic_auth"); 
   await page.waitForTimeout(5000);   
   await page.locator("")
+});
+
+// to test api of open meteo 
+
+// end point - https://api.open-meteo.com/v1/forecast?latitude=12.9561403&longitude=77.4672651
+// type of request - Get
+// response code - 200 
+
+test.only("api testing using playwright", async ({page})=>{
+    const apicontext=request.newContext();
+    const response=(await apicontext).get("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41");
+    console.log((await response).status());
+    console.log((await response).statusText());
+     console.log((await response).body());
+
+
+})
+
+// keep this for observation .... explore
+test('should create a bug report', async ({ request }) => {
+  const newIssue = await request.post(`https://github.com/rockysandeep0909/playwrightFrameworkJS/issues/`, {
+    data: {
+      title: 'bug001',
+      body: 'not able to click on login button',
+    }
+  });
+  expect(newIssue.ok()).toBeTruthy();
+
+  const issues = await request.get(`https://github.com/rockysandeep0909/playwrightFrameworkJS/issues/`);
+  expect(issues.ok()).toBeTruthy();
+  expect(await issues.json()).toContainEqual(expect.objectContaining({
+    title: 'bug001',
+    body: 'not able to click on login button'
+  }));
+});
+
+
+test('TC-34 - Handling geolocation permission denial in playwright',async ({page})=>{
+
+  await page.goto("https://www.google.com/maps"); 
+  await page.waitForTimeout(10000);   
 });
