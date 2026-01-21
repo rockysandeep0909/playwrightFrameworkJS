@@ -12,4 +12,13 @@ Scenario: Invalid login
     When I enter valid username  
     When I enter invalid Password
     And I click on login button
+    Then user should see an error message
+
+
+Scenario : dashboard validation 
+    Given I am in login page of saucedemo
+    When I enter valid username  
+    When I enter valid Password
+    And I click on login button
     Then user should be redirected to saucedemo page
+

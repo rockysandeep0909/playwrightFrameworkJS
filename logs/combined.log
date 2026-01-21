@@ -177,3 +177,84 @@
 2026-01-11 12:33:25 [INFO]: Starting login test
 2026-01-11 12:33:26 [INFO]: Navigated to login page
 2026-01-13 08:50:14 [INFO]: Dialog message: I am a JS Alert
+2026-01-15 18:54:37 [INFO]: =========================
+2026-01-15 18:54:37 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-15 18:54:37 [INFO]: Starting login test
+2026-01-15 18:54:39 [INFO]: Navigated to login page
+2026-01-15 18:54:40 [INFO]: Entered username
+2026-01-15 18:54:40 [INFO]: Entered password
+2026-01-15 18:54:47 [INFO]: =========================
+2026-01-15 18:54:47 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-15 18:54:47 [INFO]: Starting login test
+2026-01-15 18:54:48 [INFO]: Navigated to login page
+2026-01-15 18:54:49 [INFO]: Entered username
+2026-01-15 18:54:49 [INFO]: Entered password
+2026-01-15 20:26:47 [INFO]: Navigated to login page
+2026-01-15 20:26:47 [INFO]: Entered username
+2026-01-15 20:26:47 [INFO]: Entered password
+2026-01-15 20:26:48 [INFO]: Clicked on login button
+2026-01-15 20:26:48 [INFO]: Performed login operation
+2026-01-15 20:26:48 [INFO]: Clicked on product to view details
+2026-01-15 20:26:48 [INFO]: Clicked on cart badge to view cart items
+2026-01-18 19:24:05 [INFO]: Navigated to saucedemo application
+2026-01-18 19:24:05 [INFO]: Entered username
+2026-01-18 19:24:05 [INFO]: Entered password
+2026-01-18 19:24:05 [INFO]: Clicked on login button
+2026-01-18 19:24:05 [INFO]: Clicked on add to cart button for product
+2026-01-18 19:24:37 [INFO]: Navigated to saucedemo application
+2026-01-18 19:24:37 [INFO]: Entered username
+2026-01-18 19:24:37 [INFO]: Entered password
+2026-01-18 19:24:37 [INFO]: Clicked on login button
+2026-01-18 19:24:37 [INFO]: Clicked on add to cart button for product
+2026-01-18 19:26:38 [INFO]: Navigated to saucedemo application
+2026-01-18 19:26:38 [INFO]: Entered username
+2026-01-18 19:26:38 [INFO]: Entered password
+2026-01-18 19:26:39 [INFO]: Clicked on login button
+2026-01-18 19:26:39 [INFO]: Clicked on add to cart button for product
+2026-01-21 09:01:38 [INFO]: =========================
+2026-01-21 09:01:38 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-21 09:01:38 [INFO]: Starting login test
+2026-01-21 09:01:40 [INFO]: Navigated to login page
+2026-01-21 09:01:40 [INFO]: Entered username
+2026-01-21 09:01:40 [INFO]: Entered password
+2026-01-21 09:01:55 [INFO]: =========================
+2026-01-21 09:01:55 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-21 09:01:55 [INFO]: Starting login test
+2026-01-21 09:01:56 [INFO]: Navigated to login page
+2026-01-21 09:01:57 [INFO]: Entered username
+2026-01-21 09:01:57 [INFO]: Entered password
+2026-01-21 09:15:27 [INFO]: =========================
+2026-01-21 09:15:27 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-21 09:15:27 [INFO]: Starting login test
+2026-01-21 09:15:28 [INFO]: Navigated to login page
+2026-01-21 09:15:28 [INFO]: Entered username
+2026-01-21 09:15:28 [INFO]: Entered password
+2026-01-21 09:15:33 [INFO]: Login successful
+2026-01-21 09:19:21 [INFO]: =========================
+2026-01-21 09:19:21 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-21 09:19:21 [INFO]: Starting login test
+2026-01-21 09:19:23 [INFO]: Navigated to login page
+2026-01-21 09:19:23 [INFO]: Entered username
+2026-01-21 09:19:23 [INFO]: Entered password
+2026-01-21 09:19:28 [INFO]: Login successful
+2026-01-21 09:22:36 [INFO]: =========================
+2026-01-21 09:22:36 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-21 09:22:36 [INFO]: Starting login test
+2026-01-21 09:22:38 [INFO]: Navigated to login page
+2026-01-21 09:22:38 [INFO]: Entered username
+2026-01-21 09:22:38 [INFO]: Entered password
+2026-01-21 09:23:26 [INFO]: =========================
+2026-01-21 09:23:26 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-21 09:23:26 [INFO]: Starting login test
+2026-01-21 09:23:27 [INFO]: Navigated to login page
+2026-01-21 09:23:27 [INFO]: Entered username
+2026-01-21 09:23:27 [INFO]: Entered password
+2026-01-21 09:23:38 [INFO]: Login successful
+2026-01-21 09:30:51 [INFO]: =========================
+2026-01-21 09:30:51 [INFO]: Executing TC-44 - Wikipedia smoke test
+2026-01-21 09:30:52 [INFO]: Navigated to Wikipedia homepage
+2026-01-21 09:30:52 [INFO]: Page title verified
+2026-01-21 09:30:56 [INFO]: =========================
+2026-01-21 09:30:56 [INFO]: Executing TC-44 - Wikipedia smoke test
+2026-01-21 09:30:57 [INFO]: Navigated to Wikipedia homepage
+2026-01-21 09:30:58 [INFO]: Page title verified

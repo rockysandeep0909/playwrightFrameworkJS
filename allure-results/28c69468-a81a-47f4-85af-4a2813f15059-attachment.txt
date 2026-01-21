@@ -1,0 +1,5 @@
+2026-01-21 09:30:51 [INFO]: =========================
+2026-01-21 09:30:51 [INFO]: Executing TC-44 - Wikipedia smoke test
+2026-01-21 09:30:52 [INFO]: Navigated to Wikipedia homepage
+Page Title: Wikipedia
+2026-01-21 09:30:52 [INFO]: Page title verified

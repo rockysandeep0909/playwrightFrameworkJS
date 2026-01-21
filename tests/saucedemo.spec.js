@@ -11,7 +11,7 @@ function getRandomNumber(min,max){
 }
 
 // Test case to login to saucedemo application
-test('TC 01 - login to saucedemo applicaiton using valid username and password ',async ({page})=>{
+test('@Regression TC 01 - login to saucedemo applicaiton using valid username and password ',async ({page})=>{
   logger.info("=========================");
   logger.info("Executing TC 01 - login to saucedemo applicaiton using valid username and password");
   logger.info('Starting login test');
@@ -26,18 +26,19 @@ test('TC 01 - login to saucedemo applicaiton using valid username and password '
   await page.locator("//input[@data-test='password']").fill(process.env.PASSWORD);
    logger.info('Entered password');
   await page.locator("//input[@id='login-button']").click();
- 
+  await page.pause();
   
   await page.waitForTimeout(5000);
 
 
-  // validation step - Assertions
- await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html1');
- logger.info('Login successful');
+
+// validation step - Assertions
+await expect(page).toHaveURL(/.*inventory\.html$/);
+logger.info('Login successful');
 }) 
 
 // Negative test case to login to saucedemo application
-test('TC 02 login to saucedemo applicaiton with invalid username and password ',async ({page})=>{
+test('@Smoke TC 02 login to saucedemo applicaiton with invalid username and password ',async ({page})=>{
 
   await page.goto(process.env.BASE_URL);
   await page.locator("//input[@data-test='username']").fill(process.env.user_Name);
@@ -52,7 +53,7 @@ test('TC 02 login to saucedemo applicaiton with invalid username and password ',
 
 })
 
-test('TC 03 - Adding product to the cart and review cart item',async ({page})=>{
+test('@Smoke TC 03 - Adding product to the cart and review cart item',async ({page})=>{
 
   await page.goto(process.env.BASE_URL);
   // assertion for title
@@ -537,7 +538,7 @@ test('TC-31 - Handling touch events in playwright',async ({page})=>{
 // test to handle media playback in playwright
 test('TC-32 - Handling media playback in playwright',async ({page})=>{
   await page.goto("https://www.w3schools.com/html/html5_video.asp");
-  const video=page.locator("video");
+  const video=page.locator("//video[@id='video2']");
   await video.click();
   await page.waitForTimeout(10000);   
   await video.click();

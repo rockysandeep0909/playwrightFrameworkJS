@@ -8,7 +8,7 @@ const logger = require('../utils/logger');
 test("TC-01 - E2E test using page object model",async ({page})=>{  
     const loginPage=new LoginPage(page);
     const inventoryPage=new InventoryPage(page);
-    const DropDownUtil= new DropdownUtil();
+    
     await loginPage.goTO();
  
 

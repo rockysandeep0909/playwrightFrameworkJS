@@ -1,4 +1,5 @@
 const {test,expect,request}=require('@playwright/test');
+const { utils } = require('xlsx');
 
 
 test('Web Table Handling Test', async ({page})=>{
@@ -95,12 +96,16 @@ test('TC-26 - Handling http authentication in playwright',async ({page})=>{
 // type of request - Get
 // response code - 200 
 
-test.only("api testing using playwright", async ({page})=>{
+test("api testing using playwright", async ({page})=>{
     const apicontext=request.newContext();
-    const response=(await apicontext).get("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41");
+    
+   
+    const response=(await apicontext).get("https://api.open-meteo.com/v1/forecast?latitude=52.52");
     console.log((await response).status());
     console.log((await response).statusText());
-     console.log((await response).body());
+    console.log((await response)); 
+
+    
 
 
 })
