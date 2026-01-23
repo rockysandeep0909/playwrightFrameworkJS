@@ -7,7 +7,7 @@ on:
 
   schedule:
     - cron: '10 4 * * *'
-    
+
 jobs:
   test:
     timeout-minutes: 60
@@ -22,7 +22,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test --grep "@Regression"
+      run: npx playwright test --grep "@Smoke"
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
