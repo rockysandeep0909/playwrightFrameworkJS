@@ -1,0 +1,5 @@
+login successful
+Received message Sauce Labs Backpack
+Item names is Sauce Labs Backpack,Sauce Labs Bike Light,Sauce Labs Bolt T-Shirt,Sauce Labs Fleece Jacket,Sauce Labs Onesie,Test.allTheThings() T-Shirt (Red)
+Item prices are $29.99,$9.99,$15.99,$49.99,$7.99,$15.99
+Cart item is Sauce Labs Backpack
