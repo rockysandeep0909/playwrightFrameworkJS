@@ -258,3 +258,24 @@
 2026-01-21 09:30:56 [INFO]: Executing TC-44 - Wikipedia smoke test
 2026-01-21 09:30:57 [INFO]: Navigated to Wikipedia homepage
 2026-01-21 09:30:58 [INFO]: Page title verified
+2026-01-24 10:49:47 [INFO]: =========================
+2026-01-24 10:49:47 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-24 10:49:47 [INFO]: Starting login test
+2026-01-24 10:49:50 [INFO]: Navigated to login page
+2026-01-24 10:49:51 [INFO]: Entered username
+2026-01-24 10:49:51 [INFO]: Entered password
+2026-01-24 10:49:56 [INFO]: Login successful
+2026-01-24 10:50:27 [INFO]: =========================
+2026-01-24 10:50:27 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-24 10:50:27 [INFO]: Starting login test
+2026-01-24 10:50:29 [INFO]: Navigated to login page
+2026-01-24 10:50:29 [INFO]: Entered username
+2026-01-24 10:50:29 [INFO]: Entered password
+2026-01-24 10:50:34 [INFO]: Login successful
+2026-01-24 10:56:42 [INFO]: =========================
+2026-01-24 10:56:42 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-24 10:56:42 [INFO]: Starting login test
+2026-01-24 10:56:43 [INFO]: Navigated to login page
+2026-01-24 10:56:43 [INFO]: Entered username
+2026-01-24 10:56:43 [INFO]: Entered password
+2026-01-24 10:56:49 [INFO]: Login successful

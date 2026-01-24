@@ -1,4 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","16651","@Smoke TC 02 login to saucedemo applicaiton with invalid username and password","chromium","Wed Jan 21 09:30:07 IST 2026","failed","Wed Jan 21 09:30:24 IST 2026","","saucedemo.spec.js","",""
-"","23503","@Smoke TC 03 - Adding product to the cart and review cart item","chromium","Wed Jan 21 09:30:26 IST 2026","passed","Wed Jan 21 09:30:50 IST 2026","","saucedemo.spec.js","",""
-"","2836","TC-44 - Wikipedia smoke test","chromium","Wed Jan 21 09:30:55 IST 2026","failed","Wed Jan 21 09:30:58 IST 2026","","saucedemo.spec.js","",""
+"","23423","@Smoke TC 04- Selecting sorting option from the dropdown","chromium","Sat Jan 24 11:01:39 IST 2026","passed","Sat Jan 24 11:02:03 IST 2026","","saucedemo.spec.js","",""
+"","23701","@Smoke TC 03 - Adding product to the cart and review cart item","chromium","Sat Jan 24 11:01:15 IST 2026","passed","Sat Jan 24 11:01:39 IST 2026","","saucedemo.spec.js","",""
+"","3359","@Smoke TC 02 login to saucedemo applicaiton with invalid username and password","chromium","Sat Jan 24 11:01:11 IST 2026","passed","Sat Jan 24 11:01:15 IST 2026","","saucedemo.spec.js","",""
+"","9039","@Regression TC 01 - login to saucedemo applicaiton using valid username and password","chromium","Sat Jan 24 10:56:41 IST 2026","passed","Sat Jan 24 10:56:50 IST 2026","","saucedemo.spec.js","",""

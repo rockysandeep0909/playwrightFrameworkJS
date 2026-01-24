@@ -16,22 +16,13 @@ test('@Regression TC 01 - login to saucedemo applicaiton using valid username an
   logger.info("Executing TC 01 - login to saucedemo applicaiton using valid username and password");
   logger.info('Starting login test');
   await  page.goto(process.env.BASE_URL);
-  logger.info('Navigated to login page');
-
-
-
-   
+  logger.info('Navigated to login page');   
   await  page.locator("//input[@data-test='username']").fill(process.env.user_Name);
     logger.info('Entered username');
   await page.locator("//input[@data-test='password']").fill(process.env.PASSWORD);
    logger.info('Entered password');
-  await page.locator("//input[@id='login-button']").click();
-  
-  
+  await page.locator("//input[@id='login-button']").click();  
   await page.waitForTimeout(5000);
-
-
-
 // validation step - Assertions
 await expect(page).toHaveURL(/.*inventory\.html$/);
 logger.info('Login successful');
@@ -49,8 +40,6 @@ test('@Smoke TC 02 login to saucedemo applicaiton with invalid username and pass
   // console.log(getRandomNumber(1,1000));
   // validation step - Assertions
   //await expect(page.locator("//button[@class='error-button']")).toBeVisible();
-
-
 })
 
 test('@Smoke TC 03 - Adding product to the cart and review cart item',async ({page})=>{
@@ -63,8 +52,6 @@ test('@Smoke TC 03 - Adding product to the cart and review cart item',async ({pa
   await page.locator("//input[@id='login-button']").click();
   await console.log("login successful");
   await page.waitForTimeout(5000);
-
-
   // // validation step - Assertions
   await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 
@@ -76,9 +63,6 @@ test('@Smoke TC 03 - Adding product to the cart and review cart item',async ({pa
   let expectedMessage = 'Sauce Labs Backpack';
   
   await expect(page.locator("//div[text()='Sauce Labs Backpack']")).toHaveText(expectedMessage);
-
-
-
   let message2 = await page.locator("//div[@class='inventory_item_name ']").allTextContents();
   console.log("Item names is " + message2);
 
@@ -113,7 +97,7 @@ test('@Smoke TC 03 - Adding product to the cart and review cart item',async ({pa
 }) 
 
 // selecting the sorting option from the dropdown
-test('TC 04- Selecting sorting option from the dropdown',async ({page})=>{
+test('@Smoke TC 04- Selecting sorting option from the dropdown',async ({page})=>{
   await page.goto(process.env.BASE_URL);
   await page.locator("//input[@data-test='username']").fill(process.env.user_Name);
   await page.locator("//input[@data-test='password']").fill(process.env.PASSWORD);
