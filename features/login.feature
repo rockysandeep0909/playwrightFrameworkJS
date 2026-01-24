@@ -1,5 +1,5 @@
 Feature: Login
-
+    @smoke
     Scenario: Successful login using valid credential
         Given I am in login page of saucedemo
         When I enter valid username
@@ -7,6 +7,7 @@ Feature: Login
         And I click on login button
         Then user should be redirected to saucedemo page
 
+    @smoke
     Scenario: Invalid login
         Given I am in login page of saucedemo
         When I enter valid username
