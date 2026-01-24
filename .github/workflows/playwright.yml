@@ -5,8 +5,10 @@ on:
   pull_request:
     branches: [ main, master ]
 
+on:
   schedule:
-    - cron: '59 05 * * *'
+    - cron: '15 6 * * *'   # 11:45 AM IST daily
+  workflow_dispatch:
 
 jobs:
   test:
