@@ -14,7 +14,7 @@ class ExcelUtil {
    * @param {string} sheetName - Name of the sheet to read (optional, defaults to first sheet)
    * @returns {Array} Array of objects with column headers as keys
    */
-  static readExcelData(filePath, sheetName = null) {
+   static readExcelData(filePath, sheetName = null) {
     try {
       // Resolve the absolute path
       const absolutePath = path.resolve(filePath);

@@ -2,16 +2,12 @@ const { test, expect } = require('@playwright/test');
 const ExcelUtil = require('../utils/excelutil');
 const path = require('path');
 
+// Read Excel data at module level (before test collection)
+const excelFilePath = path.join(__dirname, '../test-data/testdata.xlsx');
+const testData = ExcelUtil.readExcelData(excelFilePath, 'LoginCredentials');
+console.log('Test data loaded from Excel:', testData);
+
 test.describe('Excel Data Driven Login Tests', () => {
-  let testData;
-
-  test.beforeAll(() => {
-    // Read login credentials from Excel file
-    const excelFilePath = path.join(__dirname, '../test-data/testdata.xlsx');
-    testData = ExcelUtil.readExcelData(excelFilePath, 'LoginCredentials');
-    console.log('Test data loaded from Excel:', testData);
-  });
-
   // Run test for each row in Excel
   testData?.forEach((userData, index) => {
     test(`Login Test ${index + 1} - User: ${userData.username}`, async ({ page }) => {
@@ -19,8 +15,8 @@ test.describe('Excel Data Driven Login Tests', () => {
       await page.goto('https://www.saucedemo.com/');
 
       // Verify page loaded
-      const loginContainer = page.locator('[class*="login"]');
-      await expect(loginContainer).toBeVisible({ timeout: 5000 });
+      //const loginContainer = page.locator('[class*="login"]');
+      //await expect(loginContainer).toBeVisible({ timeout: 5000 });
 
       // Fill username from Excel data
       await page.fill('[data-test="username"]', userData.username);

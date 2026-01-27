@@ -118,3 +118,22 @@ test('TC-07- Visual testing example 2',async ({page})=>{
     expect (await page.screenshot()).toMatchSnapshot("expectedsaucedemoinventory.png");
 
 })
+
+
+test('@Smoke TC-08 - using CSS ',async ({page})=>{
+
+  await page.goto(process.env.BASE_URL);
+  const placeholdername=await page.locator("//input[@data-test='username']").getAttribute('placeholder');
+
+  console.log("Placeholder name is "+placeholdername);
+  await page.pause();
+  await page.locator("#user-name").fill(process.env.user_Name);
+  const enteredUsername=await page.locator("#user-name").inputValue();
+  console.log("Entered username is "+enteredUsername);
+
+
+  await page.locator("#password").fill(process.env.PASSWORD);
+  await page.locator("#login-button").click();
+  await console.log("login successful");
+
+})

@@ -9,7 +9,7 @@ class LoginPage{
 //Region 1
 constructor(page){
    this.page=page;
-   this.username= page.locator("//input[@data-test='username']");
+   this.username= page.locator("#user-name");
    this.password=page.locator("//input[@data-test='password']");
    this.loginButton= page.locator("//input[@id='login-button']");
 }

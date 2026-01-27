@@ -279,3 +279,37 @@
 2026-01-24 10:56:43 [INFO]: Entered username
 2026-01-24 10:56:43 [INFO]: Entered password
 2026-01-24 10:56:49 [INFO]: Login successful
+2026-01-25 10:50:48 [INFO]: =========================
+2026-01-25 10:50:48 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-25 10:50:48 [INFO]: Starting login test
+2026-01-25 10:50:52 [INFO]: Navigated to login page
+2026-01-25 10:50:52 [INFO]: Entered username
+2026-01-25 10:50:52 [INFO]: Entered password
+2026-01-25 10:50:57 [INFO]: Login successful
+2026-01-25 11:23:51 [INFO]: =========================
+2026-01-25 11:23:51 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-25 11:23:51 [INFO]: Starting login test
+2026-01-25 11:23:54 [INFO]: Navigated to login page
+2026-01-25 11:23:54 [INFO]: Entered username
+2026-01-25 11:23:54 [INFO]: Entered password
+2026-01-25 11:23:59 [INFO]: Login successful
+2026-01-27 09:01:36 [INFO]: =========================
+2026-01-27 09:01:36 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-27 09:01:36 [INFO]: Starting login test
+2026-01-27 09:01:37 [INFO]: Navigated to login page
+2026-01-27 09:01:37 [INFO]: Entered username
+2026-01-27 09:01:37 [INFO]: Entered password
+2026-01-27 09:01:47 [INFO]: Login successful
+2026-01-27 09:04:23 [INFO]: =========================
+2026-01-27 09:04:23 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-27 09:04:23 [INFO]: Starting login test
+2026-01-27 09:04:23 [INFO]: Navigated to login page
+2026-01-27 09:04:23 [INFO]: Entered username
+2026-01-27 09:04:23 [INFO]: Entered password
+2026-01-27 09:04:34 [INFO]: Login successful
+2026-01-27 09:04:59 [INFO]: =========================
+2026-01-27 09:04:59 [INFO]: Executing TC 01 - login to saucedemo applicaiton using valid username and password
+2026-01-27 09:04:59 [INFO]: Starting login test
+2026-01-27 09:04:59 [INFO]: Navigated to login page
+2026-01-27 09:04:59 [INFO]: Entered username
+2026-01-27 09:04:59 [INFO]: Entered password

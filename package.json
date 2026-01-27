@@ -8,7 +8,8 @@
     "chrometest": "npx playwright test --project=chromium",
     "firefoxtest": "npx playwright test --project=firefox",
     "webkittest": "npx playwright test --project=webkit",
-    "e2e": "npx playwright test tests/todo-page.spec.ts"
+    "e2e": "npx playwright test tests/todo-page.spec.ts",
+    "regression": "npx playwright test --grep @regression"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,9 @@
   "devDependencies": {
     "@cucumber/cucumber": "^12.5.0",
     "@playwright/test": "^1.57.0",
-    "@types/node": "^24.10.1"
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "allure-playwright": "^3.4.5",

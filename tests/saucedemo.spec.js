@@ -24,7 +24,11 @@ test('@Regression TC 01 - login to saucedemo applicaiton using valid username an
   await page.locator("//input[@id='login-button']").click();  
   await page.waitForTimeout(5000);
 // validation step - Assertions
-await expect(page).toHaveURL(/.*inventory\.html$/);
+await expect(page).toHaveURL(/.*inventory1\.html$/);
+
+console.log("Login continued here though the assertion failed");
+
+//await expect(page).toHaveURL(/.*inventory\.html$/);
 logger.info('Login successful');
 }) 
 
