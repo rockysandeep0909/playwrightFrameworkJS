@@ -30,7 +30,7 @@ export default defineConfig({
   use: {
     trace:'retain-on-failure',
     video:'retain-on-failure',
-    headless:false,
+    headless:true,
     screenshot: 'only-on-failure', 
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
