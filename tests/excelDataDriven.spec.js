@@ -53,6 +53,10 @@ test.describe('Excel Data Driven Login Tests', () => {
     console.log('Users data from Excel:');
     console.table(usersData);
 
+    const loginData = ExcelUtil.readExcelData(excelFilePath, 'LoginCredentials');
+    console.log('LoginCredentials data from Excel:');
+    console.table(loginData);
+
     expect(usersData.length).toBeGreaterThan(0);
   });
 });

@@ -5,7 +5,7 @@ const {DropDownUtil, default: DropdownUtil}=require('../utils/dropdownutil')
 import 'dotenv/config';
 const logger = require('../utils/logger');
 
-test("TC-01 - E2E test using page object model",async ({page})=>{  
+test("TC-01  - E2E test using page object model",async ({page})=>{  
     const loginPage=new LoginPage(page);
     const inventoryPage=new InventoryPage(page);
     
